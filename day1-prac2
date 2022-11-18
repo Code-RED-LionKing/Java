@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        int x =10;
+        int y = 20;
+        int z = (++x) + (y--);
+
+        System.out.println(z);
+        //결과값은 31이 나온다
+        //++x 는 전위 연산자 x에 +1 증감한 값이 연산 결과값 = 11
+        //y-- 는 후위 연산자 y에 -1 (감소하기 전 값이 연산 결과 값 =20
+        //result = 31
+    }
+}
+
