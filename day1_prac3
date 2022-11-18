@@ -1,0 +1,21 @@
+while문과 Math.random() 메소드를 이용해서 2개의 주사위를 던졌을 때 나오는 눈을 
+(눈1, 눈2) 형태로 출력하고, 눈의 합이 5가 아니면 계속 주사위를 던지고,
+눈의 합이 5이면 실행을 멈추는 코드를 작성해보세요. 
+눈의 합이 5가 되는 조합은 (1,4), (4,1), (2,3), (3,2)입니다.
+
+public class Main {
+    public static void main(String[] args) {
+    
+        while (true) { // 무조건 true표시
+            int num1 = (int) (Math.random() *6) +1; // Math. random 은 0~1 사이 소숫점  출력하기 때문에 (정수변환) (0.0001~0.9999)*6 +1 = (0~5) +1 = (1~6사이 표시)
+            int num2 = (int) (Math.random()*6) +1; //주사위 2개 num1 num2
+            
+            System.out.println("(" +num1 +", "+num2 +")");
+                if (num1 + num2 ==5){ //주사위 2개의 합이 5면
+                    break;//스탑
+                    }
+                }
+       
+    }
+}
+
