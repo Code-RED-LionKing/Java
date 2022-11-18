@@ -1,0 +1,25 @@
+public class Main {
+    public static void main(String[] args) {
+        int var1 = 5;
+        int var2 = 2;
+        double var3 = var1/var2;
+        int  var4= (int)(var3*var2);
+        System.out.println(var4);
+    }
+}
+위 문제를 연산하면
+double var3= 2.5
+var4 = 2
+--> 5를 resurlt로 얻고 싶다 하지만 결과값은 4가나오게 된다.
+
+그 이유는 double var3 = var1/var2; 연산시 정수타입으로 resurt 를 저장하기 떄문에
+2.5가 아닌 double var3 = 2 로저장이된다.
+
+5를 결과값으로 얻기 위해서는 
+double var3 = (double)var1/var2; //정수타입을 실수타입으로 변환(double)
+를 해주어야 2.5를 얻고 
+
+int var4 =(int)var3*var2;
+Sout(var4);
+= 5가 나온다.
+ 
